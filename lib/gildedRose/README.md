@@ -1,3 +1,5 @@
+# Gilded Rose Kata
+
 Hi and welcome to team Gilded Rose.
 
 As you know, we are a small inn with a prime location in a prominent city ran
@@ -43,10 +45,7 @@ to our system:
   - "Conjured" items degrade in *quality* twice as fast as normal items
 
 Feel free to make any changes to the *update_quality* function and add any new
-code as long as everything still works correctly. However, do not alter the
-*Item* function or *items* property as those belong to the goblin in the corner
-who will insta-rage and one-shot you as he doesn't believe in shared code
-ownership.
+code as long as everything still works correctly.
 
 Just for clarification, an item can never have its *quality* increase above 50,
 however "Sulfuras" is a legendary item and as such its *quality* is 80 and it

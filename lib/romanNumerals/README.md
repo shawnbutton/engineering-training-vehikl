@@ -109,7 +109,7 @@ For example:
 1984 => 1000 + 900 + 80 + 4 => "M" + "CM" + "LXXX" + "IV" => "MCMLXXXIV"
 
 ## Kata
-Create a function `calculate(input : int) : string` method that converts the input arabic number to its roman numeral equivalent.
+Create a function `calculate(input : int) : string` that converts the input arabic number to its roman numeral equivalent.
 
 Some examples:
 

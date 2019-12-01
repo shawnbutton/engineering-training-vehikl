@@ -6,7 +6,7 @@ Fizzbuzz is a group word game for children to teach them about division.
 Players take turns to count incrementally, replacing any number divisible by 3 with the word "fizz", any number divisible by 5 with the word "buzz", and any number divisible by 3 and 5 with the word "fizzbuzz". 
 
 ## Kata
-Create a fizBuzz(number : int) : string function that returns a string according to the rules of Fizzbuzz:
+Create a function ```fizBuzz(number : int) : string``` that returns a string according to the rules of Fizzbuzz:
 
 ```
 fizzbuzz.valueFor(1);  // "1"
@@ -18,8 +18,6 @@ fizzbuzz.valueFor(6);  // "fizz"
 ...
 fizzbuzz.valueFor(15); // "fizzbuzz"
 ```
-
-Players take turns to count incrementally, replacing any number divisible by 3 with the word "fizz", any number divisible by 5 with the word "buzz", and any number divisible by 3 and 5 with the word "fizzbuzz". 
 
 ## Bonus Variation
 Also return "fizz" if the number contains the digit "3" and "buzz" if the number contains digit "5":
