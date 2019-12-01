@@ -3,7 +3,7 @@
 
 const sut = require('../../lib/fizzbuzz')
 
-describe('roman numeral converter', () => {
+describe('Fizzbuzz', () => {
   it('should do something', () => {
     const given = ''
 
