@@ -1,0 +1,20 @@
+{
+  "name": "engineering_training_vehicl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "standard": "^14.3.1"
+  }
+}
