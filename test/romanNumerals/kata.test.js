@@ -1,15 +1,15 @@
 'use strict'
 /* eslint-env jest */
 
-const sut = require('../../lib/fizzbuzz')
+const sut = require('../../lib/romanNumerals')
 
-describe('roman numeral converter', () => {
+describe('Converts Arabic to Roman numerals', () => {
   it('should do something', () => {
     const given = ''
 
     const expected = ''
 
-    const result = sut.valueFor(given)
+    const result = sut.calculate(given)
 
     expect(result).toEqual(expected)
   })

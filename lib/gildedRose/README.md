@@ -66,7 +66,7 @@ To run the tests you need to have node installed.
 
 run:
 ```
-npm install
-npm test
+yarn install
+yarn test
 ```
 
