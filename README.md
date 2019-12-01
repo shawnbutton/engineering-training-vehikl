@@ -50,3 +50,11 @@ Time:        1.248s
 Ran all test suites.
 ✨  Done in 2.90s.
 ```
+# The exercises
+Under the `lib` folder there are sub-folders for each exercise. Within that folder, the`README.md` file has information about what the
+code should do.
+
+Under the `test` folder there are sub-folders for the tests for each exercise.
+
+The `vehiklCode` folder is different. 
+It has sample code `Vehikl` that we work on day 3.
