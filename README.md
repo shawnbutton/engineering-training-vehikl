@@ -24,8 +24,8 @@ $ jest
  PASS  test/gildedRose/approval.test.js
  PASS  test/legacyEncoder/encoderCharacterization.test.js
  PASS  test/gildedRose/gilded_rose.test.js
- PASS  test/romanNumerals/kata.test.js
- PASS  test/kata/kata.test.js
+ PASS  test/romanNumerals/index.test.js
+ PASS  test/kata/index.test.js
  PASS  test/fizzbuzz/index.test.js
 -----------------|----------|----------|----------|----------|-------------------|
 File             |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
@@ -36,7 +36,7 @@ All files        |    90.86 |    87.84 |    94.12 |    91.46 |                  
  gildedRose      |      100 |    97.06 |      100 |      100 |                   |
   gilded_rose.js |      100 |    97.06 |      100 |      100 |                58 |
  kata            |      100 |      100 |      100 |      100 |                   |
-  kata.js        |      100 |      100 |      100 |      100 |                   |
+  index.js        |      100 |      100 |      100 |      100 |                   |
  legacyEncoder   |    87.69 |       80 |    92.59 |    88.33 |                   |
   encoder.js     |    87.69 |       80 |    92.59 |    88.33 |... 04,205,234,235 |
  romanNumerals   |      100 |      100 |      100 |      100 |                   |

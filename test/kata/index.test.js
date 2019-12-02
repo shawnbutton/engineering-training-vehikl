@@ -1,7 +1,7 @@
 'use strict'
 /* eslint-env jest */
 
-const sut = require('../../lib/kata/kata')
+const sut = require('../../lib/kata')
 
 describe('some set of behaviours', () => {
   it('should do something', () => {
