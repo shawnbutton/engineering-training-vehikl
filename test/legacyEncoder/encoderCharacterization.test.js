@@ -7,7 +7,7 @@ const makeDefaultGiven = () => ({
   field1: 'field value',
   number: 123,
   url: 'http://some.url?foreignChars=шеллы',
-  apiKey: 'apikey value',
+  apikey: 'apikey value',
   gid: 'gid value',
   max: 'max value',
   nid: 'nid value',
@@ -21,7 +21,7 @@ describe('encoder characterization tests', () => {
   describe('encodeTopLeakSitesString', () => {
     it('should combine two strings without encoding', () => {
       const result = sut.encodeTopLeakSitesString(makeDefaultGiven())
-      expect(result).toEqual('field1=field%20value&number=123&url=http://some.url?foreignChars=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B&apiKey=apikey%20value&gid=gid%20value&max=max%20value&nid=nid%20value&nd=nd%20value&pid=pid%20value&poi=poi%20value&sid=sid%20value')
+      expect(result).toEqual('field1=field%20value&number=123&url=http://some.url?foreignChars=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B&apikey=apikey%20value&gid=gid%20value&max=max%20value&nid=nid%20value&nd=nd%20value&pid=pid%20value&poi=poi%20value&sid=sid%20value')
     })
 
     it('should return empty string for empty object', () => {
@@ -41,7 +41,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodeNodeQueryString(given)
-      expect(result).toEqual('%7B"field1":"number":"url":"apiKey":"gid":"max":"nid":[nid value],"nd":"pid":"poi":"sid":sid value%7D')
+      expect(result).toEqual('%7B"field1":"number":"url":"apikey":"apikey value","gid":"max":"nid":[nid value],"nd":"pid":"poi":"sid":sid value%7D')
     })
   })
 
@@ -50,7 +50,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodeSegmentQueryString(given)
-      expect(result).toEqual('%7B"field1":"number":"url":"apiKey":"gid":"max":"nid":nid value,"nd":"pid":pid value,"poi":"sid":sid value%7D')
+      expect(result).toEqual('%7B"field1":"number":"url":"apikey":"apikey value","gid":"max":"nid":nid value,"nd":"pid":pid value,"poi":"sid":sid value%7D')
     })
   })
 
@@ -59,7 +59,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodePipeQueryString(given)
-      expect(result).toEqual('%7B"field1":"field value","number":123,"url":"http://some.url?foreignChars=шеллы","apiKey":"apikey value","gid":"gid value","max":"max value","nid":"nid value","nd":"nd value","pid":"pid value","poi":"poi value","sid":"sid value"%7D')
+      expect(result).toEqual('%7B"field1":"field value","number":123,"url":"http://some.url?foreignChars=шеллы","apikey":"apikey value","gid":"gid value","max":"max value","nid":"nid value","nd":"nd value","pid":"pid value","poi":"poi value","sid":"sid value"%7D')
     })
   })
 
@@ -68,7 +68,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodePipeRepairQueryString(given)
-      expect(result).toEqual('%7B"field1":"number":"url":"apiKey":"gid":"max":"nid":"nd":"pid":pid value,"poi":poi value,"sid":sid value%7D')
+      expect(result).toEqual('%7B"field1":"number":"url":"apikey":"apikey value","gid":"max":"nid":"nd":"pid":pid value,"poi":poi value,"sid":sid value%7D')
     })
   })
 
@@ -77,7 +77,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodeSpectrumRepairQueryString(given)
-      expect(result).toEqual('%7B"field1":field value,"number":123,"url":http://some.url?foreignChars=шеллы,"apiKey":apikey value,"gid":gid value,"max":max value,"nid":nid value,"nd":nd value,"pid":pid value,"poi":poi value,"sid":sid value%7D')
+      expect(result).toEqual('%7B"field1":field value,"number":123,"url":http://some.url?foreignChars=шеллы,"apikey":"apikey value","gid":gid value,"max":max value,"nid":nid value,"nd":nd value,"pid":pid value,"poi":poi value,"sid":sid value%7D')
     })
   })
 
@@ -86,7 +86,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodePoiQueryString(given)
-      expect(result).toEqual('%7B"field1":field value,"number":123,"url":http://some.url?foreignChars=шеллы,"apiKey":apikey value,"gid":gid value,"max":max value,"nid":nid value,"nd":nd value,"pid":pid value,"poi":poi value,"sid":sid value%7D')
+      expect(result).toEqual('%7B"field1":field value,"number":123,"url":http://some.url?foreignChars=шеллы,"apikey":"apikey value","gid":gid value,"max":max value,"nid":nid value,"nd":nd value,"pid":pid value,"poi":poi value,"sid":sid value%7D')
     })
   })
 
@@ -95,7 +95,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodeMeasurementQueryString(given)
-      expect(result).toEqual('%7B%22field1%22%3A%22number%22%3A%22url%22%3A%22apiKey%22%3A%22gid%22%3A%22max%22%3Amax%20value%2C%22nid%22%3Anid%20value%2C%22nd%22%3A%22pid%22%3A%22poi%22%3A%22sid%22%3Asid%20value%7D')
+      expect(result).toEqual('%7B%22field1%22%3A%22number%22%3A%22url%22%3A%22apikey%22%3A%22apikey%20value%22%2C%22gid%22%3A%22max%22%3Amax%20value%2C%22nid%22%3Anid%20value%2C%22nd%22%3A%22pid%22%3A%22poi%22%3A%22sid%22%3Asid%20value%7D')
     })
   })
 
@@ -104,7 +104,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodeMeasurementCsvQueryString(given)
-      expect(result).toEqual('%7B%22field1%22%3A%22number%22%3A%22url%22%3A%22apiKey%22%3A%22gid%22%3A%22max%22%3A%22nid%22%3Anid%20value%2C%22nd%22%3A%22pid%22%3A%22poi%22%3A%22sid%22%3Asid%20value%7D')
+      expect(result).toEqual('%7B%22field1%22%3A%22number%22%3A%22url%22%3A%22apikey%22%3A%22apikey%20value%22%2C%22gid%22%3A%22max%22%3A%22nid%22%3Anid%20value%2C%22nd%22%3A%22pid%22%3A%22poi%22%3A%22sid%22%3Asid%20value%7D')
     })
   })
 
@@ -113,7 +113,7 @@ describe('encoder characterization tests', () => {
       const given = makeDefaultGiven()
 
       const result = sut.encodeCorrelationQueryString(given)
-      expect(result).toEqual('%7B%22field1%22%3A%22number%22%3A%22url%22%3A%22apiKey%22%3A%22gid%22%3A%22max%22%3Amax%20value%2C%22nid%22%3A%22nd%22%3And%20value%2C%22pid%22%3A%22poi%22%3A%22sid%22%3Asid%20value%7D')
+      expect(result).toEqual('%7B%22field1%22%3A%22number%22%3A%22url%22%3A%22apikey%22%3A%22apikey%20value%22%2C%22gid%22%3A%22max%22%3Amax%20value%2C%22nid%22%3A%22nd%22%3And%20value%2C%22pid%22%3A%22poi%22%3A%22sid%22%3Asid%20value%7D')
     })
   })
 })
