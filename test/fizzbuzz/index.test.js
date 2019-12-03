@@ -1,16 +1,21 @@
 'use strict'
 /* eslint-env jest */
 
-const sut = require('../../lib/fizzbuzz')
+const fizzbuzz = require('../../lib/fizzbuzz')
 
 describe('Fizzbuzz', () => {
-  it('should do something', () => {
-    const given = ''
+  it('should return "fizz" when divisible by 3', () => {
+    expect(fizzbuzz.valueFor(3)).toEqual('fizz')
+    expect(fizzbuzz.valueFor(6)).toEqual('fizz')
+  })
 
-    const expected = ''
+  it('should return "buzz" for 5', () => {
+    expect(fizzbuzz.valueFor(5)).toEqual('buzz')
+  })
 
-    const result = sut.valueFor(given)
-
-    expect(result).toEqual(expected)
+  it('should return a string of the input when not divisible by 3 and not equal to 5', () => {
+    expect(fizzbuzz.valueFor(1)).toEqual('1')
+    expect(fizzbuzz.valueFor(2)).toEqual('2')
+    expect(fizzbuzz.valueFor(4)).toEqual('4')
   })
 })
