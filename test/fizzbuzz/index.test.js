@@ -24,4 +24,5 @@ describe('Fizzbuzz', () => {
     expect(fizzbuzz.valueFor(2)).toEqual('2')
     expect(fizzbuzz.valueFor(4)).toEqual('4')
   })
+
 })
