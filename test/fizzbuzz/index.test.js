@@ -14,6 +14,10 @@ describe('Fizzbuzz', () => {
     expect(fizzbuzz.valueFor(10)).toEqual('buzz')
   })
 
+  it('should return "fizzbuzz" when divisible by 3 and 5', () => {
+    expect(fizzbuzz.valueFor(15)).toEqual('fizzbuzz')
+  })
+
   it('should return a string of the input when not divisible by 3 or 5', () => {
     expect(fizzbuzz.valueFor(1)).toEqual('1')
     expect(fizzbuzz.valueFor(2)).toEqual('2')
